@@ -9,6 +9,9 @@ select
 	region.numero as region_number, 
 	comuna.name as comuna_name, 
 	need.role_token as role_token,
+	need.exp_token as exp_token,
+	need.role as role,
+	need.explanation as explanation,
 	need.macro as macro,
 	dialogue.date as date
 	

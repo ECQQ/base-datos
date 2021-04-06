@@ -1,4 +1,4 @@
-CREATE VIEW top_50_emo AS	
+CREATE VIEW top_10_emo AS	
 SELECT 
 	p.person_id, 
 	p.sex, p.education, 

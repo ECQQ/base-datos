@@ -1,4 +1,4 @@
-CREATE TABLE pair_words
+CREATE TABLE pair_roles
 (
 	pair_id integer PRIMARY KEY,
 	palabra_inicio varchar(64),

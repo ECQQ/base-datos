@@ -11,7 +11,7 @@ create_table=`docker exec -it superset_db psql -h localhost -p $puerto -U $rol -
 copy_csv=`docker exec -it superset_db psql -h localhost -p $puerto -U $rol -c `
 
 echo "Borrando antigua bd $db"
-docker exec -it superset_db  psql -h localhost -p 5432 -U superset -c "DROP DATABASE $db;"
+docker exec -it superset_db  psql -h localhost -p $puerto -U $rol -c "DROP DATABASE $db;"
 
 
 echo "Creando bd $db"
@@ -22,9 +22,9 @@ echo "Copiando archivos al contenedor"
 	
 docker cp CSV superset_db:/data
 
-tables=(region comuna dialogue person emotion need pair_words need_pairs contribution person_contribution person_emotion person_need)
+tables=(region comuna dialogue person emotion need pair_exp pair_roles need_exp_pairs need_role_pairs contribution person_contribution person_emotion person_need)
 
-views=(person_view contribution_view need_view top_10_con_view top_50_con_view top_10_emo_view top_50_emo_view top_need_view)
+views=(person_view contribution_view need_view top_10_con_view top_50_con_view top_10_emo_view top_50_emo_view top_need_exp_view top_need_role_view)
 
 tops=(top_10_con_table top_10_emo_table top_50_con_table top_50_emo_table top_10_need_macro_table top_need_word_table)
 
