@@ -24,7 +24,7 @@ docker cp CSV superset_db:/data
 
 tables=(region comuna dialogue person emotion need pair_exp pair_roles need_exp_pairs need_role_pairs contribution person_contribution person_emotion person_need)
 
-views=(person_view contribution_view need_view top_10_con_view top_50_con_view top_10_emo_view top_50_emo_view top_need_exp_view top_need_role_view con_dialogue_view emo_dialogue_view need_exp_dialogue_view need_role_dialogue_view)
+views=(person_view contribution_view need_view top_10_con_view top_50_con_view top_10_emo_view top_50_emo_view top_need_exp_view top_need_role_view con_dialogue_view emo_dialogue_view need_exp_dialogue_view need_role_dialogue_view dialogue_view)
 
 tops=(top_10_con_table top_10_emo_table top_50_con_table top_50_emo_table top_10_need_macro_table top_need_word_table)
 
